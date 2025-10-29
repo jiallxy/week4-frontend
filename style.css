@@ -1,0 +1,30 @@
+input {    
+    padding: 10px;
+    font-size: 24px;
+}
+
+#inpName {
+    width: 150px;
+}
+
+#inpDesc {
+    width: 350px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: dodgerblue;    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;        
+}
+
+#btnList {
+    margin: 100px;
+}
+
+ul {
+    font-size: 32px;
+}
