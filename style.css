@@ -17,10 +17,10 @@
   body {
       font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: row;
+      flex-direction:column;
       height: 100vh;
       justify-content: center;
-      align-items: flex-start;
+      align-items:center;
       background-color: #f4f4f4;      
   }
 
