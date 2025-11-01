@@ -1,7 +1,4 @@
-input {    
-    padding: 10px;
-    font-size: 24px;
-}
+
 
 #inpName {
     width: 150px;
@@ -27,4 +24,40 @@ button {
 
 ul {
     font-size: 32px;
+}
+
+body {  
+  background: #f0f0f0;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p#result {
+  margin-bottom: 20px;
+}
+
+div.divList {
+  text-align: left;
 }

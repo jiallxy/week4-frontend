@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <div class="container">
+    <h1>URL Shortener</h1>
+    <input type="text" id="longUrl" placeholder="enter long URL" required />
+    <input type="text" id="urlDesc" placeholder="description" required />
+    <button onclick="shortenUrl()">Shorten</button>
+    <p id="result"></p>
+
+    
+    <div class="divList">
+      <button onclick="getUrls()">List Short Links</button>
+      <ul></ul>
+    </div>
+
+  </div>
+
     <input id="inpName" placeholder="enter name" type="text">
     <input id="inpDesc" placeholder="enter description" type="text">
     <button id="btnAdd">Add Item</button>

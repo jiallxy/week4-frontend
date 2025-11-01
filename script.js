@@ -46,3 +46,40 @@ async function listItems() {
     }
 
 }
+
+// IMPORTANT: fill in your own backend url vercel link
+const API_BASE_URL = 'https://week4-backend.vercel.app';
+
+async function shortenUrl() {
+  const longUrl = document.getElementById("longUrl").value;
+  const urlDesc = document.getElementById("urlDesc").value;
+  const response = await fetch(`${API_BASE_URL}/shorten`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ longUrl,urlDesc }),
+  });
+  const data = await response.json();
+  document.getElementById("result").innerText = `Short URL: ${API_BASE_URL}/${data.shortCode}`;
+}
+
+
+async function getUrls() {  
+  const response = await fetch(`${API_BASE_URL}/urls`);
+  const data = await response.json();
+  const ul = document.querySelector('ul');
+  
+  ul.innerHTML = '';  // clear list 
+  
+  for( {shortcode,urldesc} of data) {
+    let li = document.createElement('li');
+    let anc = document.createElement('a');  // anchor tag
+
+    anc.href = `${API_BASE_URL}/${shortcode}`;
+    anc.text = urldesc;
+    anc.target = "_blank";
+
+    li.appendChild(anc);
+    ul.appendChild(li);
+
+  }
+}
