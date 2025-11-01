@@ -1,18 +1,6 @@
 
 
-#inpName {
-    width: 150px;
-}
 
-#inpDesc {
-    width: 350px;
-}
-
-
-
-#btnList {
-    margin: 100px;
-}
 
   body {
       font-family: Arial, sans-serif;
@@ -24,14 +12,6 @@
       background-color: #f4f4f4;      
   }
 
-  .container {
-      background: white;
-      padding: 20px 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin: 10px;
-  }
 
   input {
       display: block;
@@ -60,12 +40,7 @@ p#message {
     color: red;
 }
 
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  display: inline-block;
-}
+
 
 p#result {
   margin-bottom: 20px;
