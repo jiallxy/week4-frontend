@@ -85,7 +85,7 @@ async function getUrls() {
 }
 
 // IMPORTANT!! // replace with your own backend url
-const API_BACKEND_URL = "https://your-own-backend-url-here.vercel.app";  
+const API_BACKEND_URL = "https://week4-backend.vercel.app";  
 
 let dateInput = document.getElementById('dateInput');
 let timeInput = document.getElementById('timeInput');
