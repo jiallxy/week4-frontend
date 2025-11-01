@@ -83,3 +83,83 @@ async function getUrls() {
 
   }
 }
+
+// IMPORTANT!! // replace with your own backend url
+const API_BACKEND_URL = "https://your-own-backend-url-here.vercel.app";  
+
+let dateInput = document.getElementById('dateInput');
+let timeInput = document.getElementById('timeInput');
+let descInput = document.getElementById('inpDesc');
+
+let btnBook = document.getElementById('btnBook');
+let btnShow = document.getElementById('btnShow');
+
+let msg = document.getElementById('message');
+
+
+btnBook.addEventListener('click', bookAppoinment);
+btnShow.addEventListener('click', showAppointments);
+
+
+async function bookAppoinment() {
+
+    // check inputs first
+    if( dateInput.value.trim() === '') {
+        msg.textContent = "You must select a date!";
+        return;
+    }
+    if( timeInput.value.trim() === '') {
+        msg.textContent = "You must select a time!";
+        return;
+    }
+    if( descInput.value.trim() === '') {
+        msg.textContent = "You must enter a brief description!";
+        return;
+    }
+
+
+
+    let new_appt_datetime = `${dateInput.value} ${timeInput.value}:00`;
+    let new_appt_desc = descInput.value;
+    
+    let resp = await fetch(`${API_BACKEND_URL}/appointment`,{
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ new_appt_datetime, new_appt_desc }),
+    });
+
+    let data = await resp.json();
+
+    console.log(data);    
+
+    if(data?.success) {
+        msg.textContent = "Your appointment has been booked!";
+    } else {
+        msg.textContent = "Error! Please try again.";
+    }
+
+    // clear values
+    dateInput.value = '';
+    timeInput.value = '';
+    descInput.value = '';
+
+    await showAppointments();
+    
+};
+
+
+async function showAppointments() {
+    let resp = await fetch(`${API_BACKEND_URL}/appointments`);
+    let data = await resp.json();
+    console.log(data);
+
+    let ul = document.getElementById('lstBookings');
+    ul.innerHTML = ""; // clear list
+
+    for( appt of data ) {
+        let li = document.createElement('li');
+        li.textContent = appt.appt_datetime.replace('T',' ') + ' - ' + appt.appt_desc;
+        ul.appendChild(li);
+    }
+    
+}

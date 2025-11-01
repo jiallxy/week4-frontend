@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <div class="container">
+        <h2>Book an Appointment</h2>
+
+        <label for="dateInput">Appointment Date:</label>
+        <input type="date" id="dateInput" />
+
+        <label for="timeInput">Appointment Time:</label>
+        <input type="time" id="timeInput" />
+
+        <label for="timeInput">Description:</label>
+        <input type="text" id="inpDesc" />
+
+        <button id="btnBook">Book Appointment</button>
+        <button id="btnShow">Show Bookings</button>
+
+        <p id="message"></p>
+    </div>
+
+    <div class="container">
+        <h2>Bookings</h2>
+        <ul id="lstBookings"></ul>
+    </div>
+    
      <div class="container">
     <h1>URL Shortener</h1>
     <input type="text" id="longUrl" placeholder="enter long URL" required />
@@ -21,13 +44,16 @@
     </div>
 
   </div>
-
+     <div class="container"></div>
     <input id="inpName" placeholder="enter name" type="text">
     <input id="inpDesc" placeholder="enter description" type="text">
     <button id="btnAdd">Add Item</button>
     
     <button id="btnList">List Items</button>
     <ul id="lstItems"></ul>
+        </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -8,28 +8,56 @@
     width: 350px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 24px;
-    background-color: dodgerblue;    
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;        
-}
+
 
 #btnList {
     margin: 100px;
 }
 
-ul {
-    font-size: 32px;
+  body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #f4f4f4;      
+  }
+
+  .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 10px;
+  }
+
+  input {
+      display: block;
+      margin: 15px auto;
+      padding: 10px;
+      font-size: 32px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Changes the mouse cursor to a pointer */
+    margin:10px;
 }
 
-body {  
-  background: #f0f0f0;
-  text-align: center;
-  padding: 50px;
+ul {    
+    justify-items: left;
+}
+
+p#message {
+    padding: 10px;
+    font-size: 32px;
+    color: red;
 }
 
 .container {
@@ -37,21 +65,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   display: inline-block;
-}
-
-input {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-ul {
-  list-style-type: none;
 }
 
 p#result {
