@@ -2,7 +2,7 @@
 const API_BACKEND_URL0 = "https://week4-backend.vercel.app";  
 
 const itemName = document.getElementById('inpName');
-const itemDesc = document.getElementById('inpDesc');
+const itemDesc = document.getElementById('inpDescItem');
 
 const btnAdd = document.getElementById('btnAdd');
 const btnList = document.getElementById('btnList');
