@@ -1,5 +1,5 @@
 // IMPORTANT - substitute your own backend url!
-const API_BACKEND_URL = "https://week4-backend.vercel.app";  
+const API_BACKEND_URL0 = "https://week4-backend.vercel.app";  
 
 const itemName = document.getElementById('inpName');
 const itemDesc = document.getElementById('inpDesc');
@@ -23,7 +23,7 @@ async function addItem() {
     // could check that name,desc are not blank
 
     // call the back-end route that adds a record
-    await fetch(`${API_BACKEND_URL}/item`, {
+    await fetch(`${API_BACKEND_URL0}/item`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ new_item_name,new_item_desc }),
@@ -33,7 +33,7 @@ async function addItem() {
 
 async function listItems() {
     // call the backend route that gets all records
-    let resp = await fetch(`${API_BACKEND_URL}/items`);
+    let resp = await fetch(`${API_BACKEND_URL0}/items`);
     let data = await resp.json();
     console.log(data);
 
